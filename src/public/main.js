@@ -30,13 +30,14 @@ const subscription = async () => {
     applicationServerKey: PUBLIC_VAPID_KEY,
   });
 
-  await fetch("/subscription", {
+  await fetch("https://backend-pwa-3o91.onrender.com/subscription", {
     method: "POST",
     body: JSON.stringify(subscription),
     headers: {
       "Content-Type": "application/json",
     },
   });
+
   console.log("Suscribed!!");
 };
 
